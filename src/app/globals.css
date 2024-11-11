@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define o fundo azul da tela inteira */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a294e8; /* Azul (equivalente ao bg-blue-500) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tela inteira */
+  margin: 0;
+}
+
+/* Define estilos customizados e as variáveis de cor */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    /* ...demais variáveis... */
+  }
+}
+
+/* Aplica o fundo azul e o texto conforme o tema */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Define o estilo específico para o formulário */
+#app {
+  background-color: white; /* Fundo branco */
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+  max-width: 400px; /* Define a largura máxima do formulário */
+  width: 100%;
+}
